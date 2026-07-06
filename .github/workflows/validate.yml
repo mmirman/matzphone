@@ -25,22 +25,16 @@ jobs:
           # Every <project> must have name and path; default must pin a revision.
           python3 - <<'EOF'
           import xml.etree.ElementTree as ET
-          root = ET.parse('manifest/default.xml').getroot()
+          root = ET.parse('default.xml').getroot()
           default = root.find('default')
           assert default is not None and default.get('revision'), 'default revision missing'
           for p in root.findall('project'):
               assert p.get('name') and p.get('path'), f'project missing name/path: {ET.tostring(p)}'
-          print('manifest sanity OK')
+          inc = ET.parse('aosp-platform.xml').getroot()
+          names = [p.get('name') for p in root.findall('project')] + [p.get('name') for p in inc.findall('project')]
+          assert len(names) == len(set(names)), 'duplicate project names across include'
+          print(f'manifest sanity OK ({len(names)} projects)')
           EOF
-
-      - name: Makefile fragment syntax
-        run: |
-          make -f vendor/matzphone/config/common.mk -n -p >/dev/null 2>&1 || {
-            # -p with no default target exits non-zero; only fail on parse errors
-            make -f vendor/matzphone/config/common.mk -n 2>&1 | grep -q 'missing separator' && exit 1
-            true
-          }
-          echo "common.mk parses"
 
       - name: Docs link check (internal)
         run: |

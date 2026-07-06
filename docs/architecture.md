@@ -13,7 +13,7 @@ small team.
 
 ### 1. Upstream AOSP
 Pinned to the latest `android-15.0.0_rXX` release tag in
-`manifest/default.xml`. Security patch levels track the monthly ASB; we
+`default.xml`. Security patch levels track the monthly ASB; we
 target < 7 days from bulletin publication to OTA.
 
 ### 2. `vendor/matzphone`

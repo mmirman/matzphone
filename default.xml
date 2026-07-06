@@ -1,27 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  MatzPhone repo manifest.
-  Layers MatzPhone repositories over pinned upstream AOSP.
-  Usage: repo init -u <this repo> -b main && repo sync
+  MatzPhone repo manifest (this repository doubles as the manifest repo).
+  Usage: repo init -u https://github.com/mmirman/matzphone -b main && repo sync
 -->
 <manifest>
   <remote name="aosp"
           fetch="https://android.googlesource.com"
           review="https://android-review.googlesource.com" />
   <remote name="matzphone"
-          fetch="https://github.com/MatzPhone" />
+          fetch="https://github.com/mmirman" />
 
-  <!-- Pin to an AOSP release tag; bump monthly with the ASB. -->
+  <!-- Pin to an AOSP release tag; bump monthly with the ASB and regenerate
+       aosp-platform.xml (see docs/building.md). -->
   <default revision="refs/tags/android-15.0.0_r10"
            remote="aosp" sync-c="true" sync-j="4" />
 
-  <!-- Upstream AOSP is included via the platform manifest. -->
+  <!-- Upstream AOSP project list, snapshotted at the pinned tag. -->
   <include name="aosp-platform.xml" />
 
   <!-- MatzPhone layers -->
   <project name="vendor_matzphone" path="vendor/matzphone"
-           remote="matzphone" revision="main" />
-  <project name="docs" path="docs/matzphone"
            remote="matzphone" revision="main" />
 
   <!-- Device and kernel projects land here in Phase 1, e.g.:

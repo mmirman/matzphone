@@ -24,8 +24,9 @@ on high-end hardware through an ODM/OEM partnership.
 
 ```
 AOSP (android-15 release tags)
- └── MatzPhone manifest (manifest/default.xml)
+ └── MatzPhone manifest (default.xml, this repo)
       ├── vendor/matzphone        — build config, branding, feature flags
+      │                             (github.com/mmirman/vendor_matzphone)
       ├── overlays               — runtime resource overlays (RROs)
       ├── kernel/<device>        — per-device hardened kernel trees
       └── device/<vendor>/<name> — device trees for supported hardware

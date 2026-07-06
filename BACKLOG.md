@@ -6,13 +6,14 @@ If this file is ever empty and nothing is discoverable, say so honestly —
 do not invent filler tasks.
 
 ## Now (Phase 0 close-out)
-- [ ] Split repos to match the manifest: create `matzphone/manifest` and
-      `matzphone/vendor_matzphone` layout (or adjust manifest to the
-      monorepo reality) so `repo init` instructions in docs/building.md
-      are actually true
-- [ ] Add `aosp-platform.xml` include or switch manifest to AOSP's
-      platform manifest include mechanism that actually resolves
-- [ ] Add matzphone_gsi lunch target definition under vendor/matzphone
+- [ ] Add matzphone_gsi lunch target definition in vendor_matzphone repo
+- [ ] CI for vendor_matzphone repo (XML + mk validation, mirror of main CI)
+- [ ] Script `tools/update-aosp-snapshot.sh` to regenerate
+      aosp-platform.xml on ASB tag bumps (currently a manual procedure
+      documented in docs/building.md)
+- [ ] End-to-end verify: `repo init -u https://github.com/mmirman/matzphone
+      && repo sync` on a scratch machine (needs disk; may defer to the CI
+      nightly)
 - [ ] CI: add a nightly job that syncs the manifest on a schedule and
       reports breakage (manifest rot detection)
 - [ ] Write SECURITY.md (report channel, embargo policy)
@@ -37,6 +38,10 @@ do not invent filler tasks.
 - [ ] Trademark search on "MatzPhone" before money is spent on branding
 
 ## Done
+- [x] Repo split: vendor/matzphone → github.com/mmirman/vendor_matzphone;
+      manifest moved to root default.xml so `repo init` docs are true (2026-07-06)
+- [x] aosp-platform.xml: real snapshot of AOSP platform manifest at
+      android-15.0.0_r10, 1379 projects, conflicts stripped (2026-07-06)
 - [x] Scaffold, docs, manifest, vendor tree, CI (2026-07-06)
 - [x] Repo public + renamed to matzphone; history scrubbed of business docs
 - [x] LinkedIn Post 1 published

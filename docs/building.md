@@ -14,9 +14,15 @@
 
 ```sh
 mkdir matzphone && cd matzphone
-repo init -u https://github.com/MatzPhone/manifest -b main
+repo init -u https://github.com/mmirman/matzphone -b main
 repo sync -c -j$(nproc)
 ```
+
+The manifest lives at the root of this repo (`default.xml`), which includes
+`aosp-platform.xml` — a snapshot of AOSP's project list at the pinned
+release tag. When bumping the AOSP tag, regenerate the snapshot from
+`platform/manifest` at the new tag and strip its
+`<remote>/<default>/<superproject>/<contactinfo>` elements.
 
 ## Build
 
