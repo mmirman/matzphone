@@ -28,7 +28,7 @@ release tag. When bumping the AOSP tag, regenerate the snapshot from
 
 ```sh
 source build/envsetup.sh
-lunch matzphone_gsi-userdebug   # device targets appear in Phase 1
+lunch matzphone_gsi-trunk_staging-userdebug   # device targets appear in Phase 1
 m -j$(nproc)
 ```
 

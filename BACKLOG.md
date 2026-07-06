@@ -6,8 +6,10 @@ If this file is ever empty and nothing is discoverable, say so honestly —
 do not invent filler tasks.
 
 ## Now (Phase 0 close-out)
-- [ ] Add matzphone_gsi lunch target definition in vendor_matzphone repo
 - [ ] CI for vendor_matzphone repo (XML + mk validation, mirror of main CI)
+- [ ] Verify matzphone_gsi product graph evaluates (needs an AOSP checkout:
+      `lunch matzphone_gsi-trunk_staging-userdebug` dry run — fold into the
+      end-to-end repo sync verification below)
 - [ ] Script `tools/update-aosp-snapshot.sh` to regenerate
       aosp-platform.xml on ASB tag bumps (currently a manual procedure
       documented in docs/building.md)
@@ -38,6 +40,8 @@ do not invent filler tasks.
 - [ ] Trademark search on "MatzPhone" before money is spent on branding
 
 ## Done
+- [x] matzphone_gsi lunch target (trunk_staging user/userdebug/eng) in
+      vendor_matzphone products/; docs updated (2026-07-06)
 - [x] Repo split: vendor/matzphone → github.com/mmirman/vendor_matzphone;
       manifest moved to root default.xml so `repo init` docs are true (2026-07-06)
 - [x] aosp-platform.xml: real snapshot of AOSP platform manifest at
