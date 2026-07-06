@@ -20,9 +20,9 @@ repo sync -c -j$(nproc)
 
 The manifest lives at the root of this repo (`default.xml`), which includes
 `aosp-platform.xml` — a snapshot of AOSP's project list at the pinned
-release tag. When bumping the AOSP tag, regenerate the snapshot from
-`platform/manifest` at the new tag and strip its
-`<remote>/<default>/<superproject>/<contactinfo>` elements.
+release tag. When bumping the AOSP tag, run
+`tools/update-aosp-snapshot.sh <new-tag>` to regenerate the snapshot and
+update the pin, then review the diff and commit.
 
 ## Build
 

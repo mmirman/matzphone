@@ -9,9 +9,6 @@ do not invent filler tasks.
 - [ ] Verify matzphone_gsi product graph evaluates (needs an AOSP checkout:
       `lunch matzphone_gsi-trunk_staging-userdebug` dry run — fold into the
       end-to-end repo sync verification below)
-- [ ] Script `tools/update-aosp-snapshot.sh` to regenerate
-      aosp-platform.xml on ASB tag bumps (currently a manual procedure
-      documented in docs/building.md)
 - [ ] End-to-end verify: `repo init -u https://github.com/mmirman/matzphone
       && repo sync` on a scratch machine (needs disk; may defer to the CI
       nightly)
@@ -39,6 +36,8 @@ do not invent filler tasks.
 - [ ] Trademark search on "MatzPhone" before money is spent on branding
 
 ## Done
+- [x] tools/update-aosp-snapshot.sh: regenerates aosp-platform.xml + bumps
+      default.xml pin; verified idempotent at r10 (2026-07-06)
 - [x] CI on vendor_matzphone: XML validation, mk syntax, product makefile
       invariants (2026-07-06)
 - [x] matzphone_gsi lunch target (trunk_staging user/userdebug/eng) in
