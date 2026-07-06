@@ -1,0 +1,28 @@
+name: nightly-manifest-rot
+
+on:
+  schedule:
+    - cron: '41 3 * * *'
+  workflow_dispatch:
+
+jobs:
+  check-refs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verify pinned refs resolve on remotes
+        run: python3 tools/check-manifest-refs.py --stride 25
+
+      - name: repo init smoke test (manifest parses under real repo tool)
+        run: |
+          set -e
+          mkdir -p ~/bin && curl -s https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+          chmod a+x ~/bin/repo
+          git config --global user.name ci && git config --global user.email ci@example.invalid
+          git config --global color.ui false
+          mkdir /tmp/tree && cd /tmp/tree
+          python3 ~/bin/repo init --depth=1 -u "https://github.com/${GITHUB_REPOSITORY%%/*}/matzphone" -b main < /dev/null
+          python3 ~/bin/repo manifest > /tmp/merged.xml
+          grep -c '<project' /tmp/merged.xml
+          echo "repo init + include resolution OK"
