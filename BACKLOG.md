@@ -16,8 +16,6 @@ do not invent filler tasks.
 ## Next (Phase 1 prep)
 - [ ] OWNER DECISION: purchase 2× unlocked Pixel 9 from Google Store
       (~$1.6K; requirements in docs/reference-device.md)
-- [ ] Signing key ceremony doc: how release keys are generated/stored
-      offline
 - [ ] OTA server design doc (static signed metadata + payload on CDN)
 - [ ] Draft LinkedIn Post 2 (architecture: overlays-not-forks) for the
       weekly slot
@@ -30,6 +28,8 @@ do not invent filler tasks.
 - [ ] Trademark search on "MatzPhone" before money is spent on branding
 
 ## Done
+- [x] Signing key ceremony doc (docs/signing.md): key inventory, offline
+      ceremony, storage, rotation/compromise policy (2026-07-06)
 - [x] Patch series infrastructure in vendor_matzphone: layout convention,
       idempotent apply.sh, CI enforcing parse + Upstream-Status; empty
       series by design (2026-07-06)
