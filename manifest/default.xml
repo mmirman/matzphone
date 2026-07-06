@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  oss-phone repo manifest.
-  Layers oss-phone repositories over pinned upstream AOSP.
+  MatzPhone repo manifest.
+  Layers MatzPhone repositories over pinned upstream AOSP.
   Usage: repo init -u <this repo> -b main && repo sync
 -->
 <manifest>
   <remote name="aosp"
           fetch="https://android.googlesource.com"
           review="https://android-review.googlesource.com" />
-  <remote name="ossphone"
-          fetch="https://github.com/oss-phone" />
+  <remote name="matzphone"
+          fetch="https://github.com/MatzPhone" />
 
   <!-- Pin to an AOSP release tag; bump monthly with the ASB. -->
   <default revision="refs/tags/android-15.0.0_r10"
@@ -18,16 +18,16 @@
   <!-- Upstream AOSP is included via the platform manifest. -->
   <include name="aosp-platform.xml" />
 
-  <!-- oss-phone layers -->
-  <project name="vendor_ossphone" path="vendor/ossphone"
-           remote="ossphone" revision="main" />
-  <project name="docs" path="docs/ossphone"
-           remote="ossphone" revision="main" />
+  <!-- MatzPhone layers -->
+  <project name="vendor_matzphone" path="vendor/matzphone"
+           remote="matzphone" revision="main" />
+  <project name="docs" path="docs/matzphone"
+           remote="matzphone" revision="main" />
 
   <!-- Device and kernel projects land here in Phase 1, e.g.:
   <project name="device_google_shiba" path="device/google/shiba"
-           remote="ossphone" revision="main" />
+           remote="matzphone" revision="main" />
   <project name="kernel_google_shusky" path="kernel/google/shusky"
-           remote="ossphone" revision="main" />
+           remote="matzphone" revision="main" />
   -->
 </manifest>

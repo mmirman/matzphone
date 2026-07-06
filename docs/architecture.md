@@ -1,11 +1,11 @@
 # Architecture
 
-oss-phone is a downstream of AOSP, structured the way mature custom-ROM
+MatzPhone is a downstream of AOSP, structured the way mature custom-ROM
 projects (LineageOS, GrapheneOS, CalyxOS) structure theirs: a `repo`
 manifest that pins upstream AOSP release tags and layers our repositories
 on top. We deliberately do **not** fork frameworks/base wholesale; changes
 land as either (a) runtime resource overlays, (b) small patches carried in
-`vendor/ossphone/patches/` and applied at sync time, or (c) standalone apps
+`vendor/matzphone/patches/` and applied at sync time, or (c) standalone apps
 and services. This keeps rebases onto new AOSP releases tractable for a
 small team.
 
@@ -16,7 +16,7 @@ Pinned to the latest `android-15.0.0_rXX` release tag in
 `manifest/default.xml`. Security patch levels track the monthly ASB; we
 target < 7 days from bulletin publication to OTA.
 
-### 2. `vendor/ossphone`
+### 2. `vendor/matzphone`
 The distribution layer:
 - `config/common.mk` — product packages, default properties, feature flags.
 - `overlay/` — RROs for framework and app defaults (see below).
@@ -33,7 +33,7 @@ Defaults we change via RRO rather than patching:
 ### 4. Kernel
 Per-device kernel trees under `kernel/<vendor>/<device>`, GKI-based where
 the SoC supports it. Hardening config fragment
-(`ossphone_defconfig.fragment`) enables `CONFIG_INIT_ON_ALLOC_DEFAULT_ON`,
+(`matzphone_defconfig.fragment`) enables `CONFIG_INIT_ON_ALLOC_DEFAULT_ON`,
 `CONFIG_RANDOMIZE_KSTACK_OFFSET_DEFAULT`, disables `/dev/mem` and legacy
 ptrace scopes.
 

@@ -23,7 +23,7 @@ promises.
 
 ## Phase 3 — Hardware partnership (timeline depends on funding)
 - [ ] ODM shortlist + RFQ (partner strategy maintained privately)
-- [ ] EVT device with oss-phone as factory firmware
+- [ ] EVT device with MatzPhone as factory firmware
 - [ ] Certification: FCC/CE, carrier IOT as applicable
 - [ ] Retail launch
 

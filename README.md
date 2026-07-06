@@ -1,4 +1,4 @@
-# oss-phone
+# MatzPhone
 
 An open-source, privacy-first mobile operating system built on the Android
 Open Source Project (AOSP), with the long-term goal of shipping preinstalled
@@ -24,8 +24,8 @@ on high-end hardware through an ODM/OEM partnership.
 
 ```
 AOSP (android-15 release tags)
- └── oss-phone manifest (manifest/default.xml)
-      ├── vendor/ossphone        — build config, branding, feature flags
+ └── MatzPhone manifest (manifest/default.xml)
+      ├── vendor/matzphone        — build config, branding, feature flags
       ├── overlays               — runtime resource overlays (RROs)
       ├── kernel/<device>        — per-device hardened kernel trees
       └── device/<vendor>/<name> — device trees for supported hardware
@@ -46,7 +46,7 @@ and a beefy machine required — this is a full AOSP build.
 2. **Phase 2 — Alpha:** daily-drivable on reference device; OTA
    infrastructure; reproducible builds.
 3. **Phase 3 — Hardware partnership:** ODM engagement for a flagship device
-   shipping oss-phone as factory firmware. Requirements in
+   shipping MatzPhone as factory firmware. Requirements in
    [docs/hardware-requirements.md](docs/hardware-requirements.md).
 
 ## Contributing

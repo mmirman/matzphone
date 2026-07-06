@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- oss-phone framework defaults (RRO: OssPhoneFrameworkOverlay) -->
+<!-- MatzPhone framework defaults (RRO: MatzPhoneFrameworkOverlay) -->
 <resources>
     <!-- Enhanced MAC randomization: randomize per network, re-randomize
          periodically for non-persistent networks. -->

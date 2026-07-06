@@ -1,7 +1,7 @@
 # Hardware requirements for the launch device
 
 What we will ask of an ODM/OEM partner for a high-end device shipping
-oss-phone as factory firmware. These requirements exist to make the OS's
+MatzPhone as factory firmware. These requirements exist to make the OS's
 security and longevity promises actually deliverable.
 
 ## Non-negotiable
@@ -23,7 +23,7 @@ security and longevity promises actually deliverable.
 
 ## Deal structure we want
 
-- ODM manufactures and certifies; oss-phone project controls the signing
+- ODM manufactures and certifies; MatzPhone project controls the signing
   keys and OTA channel.
 - Firmware/BSP escrow so updates survive a partner exit.
 - MOQ and unit economics to be negotiated — realistic flagship MOQ is

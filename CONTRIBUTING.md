@@ -1,4 +1,4 @@
-# Contributing to oss-phone
+# Contributing to MatzPhone
 
 Thanks for your interest. The project is pre-alpha; the highest-value
 contributions right now are device bring-up, CI, and documentation review.

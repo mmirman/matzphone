@@ -35,9 +35,9 @@ jobs:
 
       - name: Makefile fragment syntax
         run: |
-          make -f vendor/ossphone/config/common.mk -n -p >/dev/null 2>&1 || {
+          make -f vendor/matzphone/config/common.mk -n -p >/dev/null 2>&1 || {
             # -p with no default target exits non-zero; only fail on parse errors
-            make -f vendor/ossphone/config/common.mk -n 2>&1 | grep -q 'missing separator' && exit 1
+            make -f vendor/matzphone/config/common.mk -n 2>&1 | grep -q 'missing separator' && exit 1
             true
           }
           echo "common.mk parses"

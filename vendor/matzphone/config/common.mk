@@ -1,14 +1,14 @@
-# oss-phone common product configuration.
+# MatzPhone common product configuration.
 # Inherited by every device target.
 
-PRODUCT_BRAND := ossphone
-PRODUCT_MANUFACTURER ?= ossphone
+PRODUCT_BRAND := matzphone
+PRODUCT_MANUFACTURER ?= matzphone
 
 # Version: <major>.<minor> tracking AOSP dessert + our iteration.
-OSSPHONE_VERSION_MAJOR := 0
-OSSPHONE_VERSION_MINOR := 1
+MATZPHONE_VERSION_MAJOR := 0
+MATZPHONE_VERSION_MINOR := 1
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.ossphone.version=$(OSSPHONE_VERSION_MAJOR).$(OSSPHONE_VERSION_MINOR)
+    ro.matzphone.version=$(MATZPHONE_VERSION_MAJOR).$(MATZPHONE_VERSION_MINOR)
 
 # Privacy / telemetry defaults
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
@@ -18,7 +18,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 # Framework defaults via RRO
 PRODUCT_PACKAGES += \
-    OssPhoneFrameworkOverlay
+    MatzPhoneFrameworkOverlay
 
 # No GMS. MicroG/sandboxed play services are user-installed, never bundled.
 
