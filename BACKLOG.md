@@ -12,7 +12,6 @@ do not invent filler tasks.
 - [ ] End-to-end verify: `repo init -u https://github.com/mmirman/matzphone
       && repo sync` on a scratch machine (needs disk; may defer to the CI
       nightly)
-- [ ] Write SECURITY.md (report channel, embargo policy)
 - [ ] Project website: static landing page (GitHub Pages) with honest
       status, linking repo and roadmap
 
@@ -34,6 +33,8 @@ do not invent filler tasks.
 - [ ] Trademark search on "MatzPhone" before money is spent on branding
 
 ## Done
+- [x] SECURITY.md + GitHub private vulnerability reporting enabled on both
+      repos (2026-07-06)
 - [x] Nightly manifest-rot CI: ref-existence sampling via
       tools/check-manifest-refs.py + repo init smoke test (2026-07-06)
 - [x] tools/update-aosp-snapshot.sh: regenerates aosp-platform.xml + bumps
