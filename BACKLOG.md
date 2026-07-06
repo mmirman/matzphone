@@ -16,7 +16,6 @@ do not invent filler tasks.
 ## Next (Phase 1 prep)
 - [ ] OWNER DECISION: purchase 2× unlocked Pixel 9 from Google Store
       (~$1.6K; requirements in docs/reference-device.md)
-- [ ] Vendor patches directory + apply-patches script with CI check
 - [ ] Signing key ceremony doc: how release keys are generated/stored
       offline
 - [ ] OTA server design doc (static signed metadata + payload on CDN)
@@ -31,6 +30,9 @@ do not invent filler tasks.
 - [ ] Trademark search on "MatzPhone" before money is spent on branding
 
 ## Done
+- [x] Patch series infrastructure in vendor_matzphone: layout convention,
+      idempotent apply.sh, CI enforcing parse + Upstream-Status; empty
+      series by design (2026-07-06)
 - [x] matzphone_tokay device product defined atop aosp_tokay (verified
       present in caimito tree at r10); caimito/zumapro projects confirmed
       already syncing via the AOSP snapshot — no manifest change needed

@@ -20,8 +20,9 @@ target < 7 days from bulletin publication to OTA.
 The distribution layer:
 - `config/common.mk` — product packages, default properties, feature flags.
 - `overlay/` — RROs for framework and app defaults (see below).
-- `patches/` — quilt-style patch series against upstream projects, each with
-  a header stating why it exists and its upstream status.
+- `patches/` — patch series against upstream projects, applied after sync
+  via `patches/apply.sh` (`git am -3`, idempotent). Every patch must carry
+  an `Upstream-Status:` header; CI enforces this.
 
 ### 3. Overlays instead of forks
 Defaults we change via RRO rather than patching:
