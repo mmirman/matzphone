@@ -12,8 +12,6 @@ do not invent filler tasks.
 - [ ] End-to-end verify: `repo init -u https://github.com/mmirman/matzphone
       && repo sync` on a scratch machine (needs disk; may defer to the CI
       nightly)
-- [ ] Project website: static landing page (GitHub Pages) with honest
-      status, linking repo and roadmap
 
 ## Next (Phase 1 prep)
 - [ ] Pick exact reference device (Pixel 9/9a) and document unlock/flash
@@ -33,6 +31,8 @@ do not invent filler tasks.
 - [ ] Trademark search on "MatzPhone" before money is spent on branding
 
 ## Done
+- [x] Landing page live at mirman.com/matzphone (GitHub Pages via Actions,
+      deploy verified green, site returns 200) (2026-07-06)
 - [x] SECURITY.md + GitHub private vulnerability reporting enabled on both
       repos (2026-07-06)
 - [x] Nightly manifest-rot CI: ref-existence sampling via
