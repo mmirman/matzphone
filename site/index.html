@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MatzPhone — an open-source, privacy-first mobile OS</title>
+<meta name="description" content="MatzPhone is an open-source, privacy-first mobile operating system built on AOSP. Pre-alpha and building in public.">
+<style>
+  :root {
+    --bg: #0d1117; --panel: #161b22; --border: #30363d;
+    --text: #e6edf3; --muted: #9aa4b2; --accent: #4ade80;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg); color: var(--text);
+    font: 17px/1.65 system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  main { max-width: 720px; margin: 0 auto; padding: 4rem 1.5rem; }
+  h1 { font-size: 2.4rem; letter-spacing: -0.02em; }
+  h1 span { color: var(--accent); }
+  .status {
+    display: inline-block; margin: 1rem 0; padding: 0.2rem 0.7rem;
+    border: 1px solid var(--border); border-radius: 999px;
+    color: var(--muted); font-size: 0.85rem;
+  }
+  .status b { color: #f0b429; font-weight: 600; }
+  p.lead { font-size: 1.15rem; color: var(--muted); margin: 1rem 0 2rem; }
+  .grid { display: grid; gap: 1rem; grid-template-columns: 1fr 1fr; margin: 2rem 0; }
+  @media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }
+  .card {
+    background: var(--panel); border: 1px solid var(--border);
+    border-radius: 10px; padding: 1.1rem 1.2rem;
+  }
+  .card h3 { font-size: 1rem; margin-bottom: 0.4rem; }
+  .card p { font-size: 0.92rem; color: var(--muted); }
+  .cta { margin: 2.5rem 0; }
+  .cta a {
+    display: inline-block; margin: 0 0.8rem 0.8rem 0; padding: 0.6rem 1.2rem;
+    border-radius: 8px; text-decoration: none; font-weight: 600;
+  }
+  .cta a.primary { background: var(--accent); color: #06110a; }
+  .cta a.secondary { border: 1px solid var(--border); color: var(--text); }
+  section { margin-top: 3rem; }
+  h2 { font-size: 1.3rem; margin-bottom: 0.8rem; }
+  ol { padding-left: 1.3rem; color: var(--muted); }
+  ol li { margin: 0.5rem 0; }
+  ol li b { color: var(--text); }
+  footer {
+    margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid var(--border);
+    color: var(--muted); font-size: 0.85rem;
+  }
+  footer a { color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Matz<span>Phone</span></h1>
+  <div class="status">Status: <b>pre-alpha</b> — scaffolding &amp; bring-up. No flashable image yet.</div>
+  <p class="lead">
+    An open-source, privacy-first mobile operating system built on AOSP —
+    developed in public, with the long-term goal of hardware that ships
+    with it out of the box.
+  </p>
+
+  <div class="cta">
+    <a class="primary" href="https://github.com/mmirman/matzphone">Source on GitHub</a>
+    <a class="secondary" href="https://github.com/mmirman/matzphone/blob/main/docs/roadmap.md">Roadmap</a>
+    <a class="secondary" href="https://github.com/mmirman/matzphone/blob/main/SECURITY.md">Security policy</a>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h3>No bundled tracking</h3>
+      <p>No Google services baked in. Telemetry off. MicroG and sandboxed
+      Play Services are opt-in, never preinstalled.</p>
+    </div>
+    <div class="card">
+      <h3>Long support windows</h3>
+      <p>Target: 5+ years of security updates, with monthly bulletin fixes
+      shipped within 7 days of publication.</p>
+    </div>
+    <div class="card">
+      <h3>Verifiable builds</h3>
+      <p>Reproducible-build CI is on the roadmap so anyone can confirm the
+      shipped image matches the public source tree.</p>
+    </div>
+    <div class="card">
+      <h3>Owner-controlled keys</h3>
+      <p>Verified boot with a user-settable root of trust — re-lock your
+      bootloader with your own keys.</p>
+    </div>
+  </div>
+
+  <section>
+    <h2>Where the project actually is</h2>
+    <ol>
+      <li><b>Phase 0 — scaffolding (now):</b> build manifest layered on
+        pinned AOSP, distribution vendor tree, CI including nightly
+        manifest-rot checks.</li>
+      <li><b>Phase 1:</b> first booting build on a Pixel-class reference
+        device, signed test builds.</li>
+      <li><b>Phase 2:</b> daily-drivable alpha, OTA pipeline, reproducible
+        builds.</li>
+      <li><b>Phase 3:</b> hardware — starting with preflashed flagship
+        devices, factory preloads as the project earns them.</li>
+    </ol>
+  </section>
+
+  <footer>
+    Apache-2.0. Built in public — the
+    <a href="https://github.com/mmirman/matzphone/blob/main/BACKLOG.md">work backlog</a>
+    is part of the repo. Contributions welcome; see
+    <a href="https://github.com/mmirman/matzphone/blob/main/CONTRIBUTING.md">CONTRIBUTING</a>.
+  </footer>
+</main>
+</body>
+</html>
