@@ -7,7 +7,7 @@ promises.
 - [x] Repository structure, license, contribution guidelines
 - [x] Build manifest skeleton (`manifest/default.xml`)
 - [x] Vendor tree skeleton with initial RRO defaults
-- [ ] CI: manifest validation + `mka bacon`-equivalent smoke build
+- [x] CI: manifest + overlay XML validation, docs link check (smoke build deferred to Phase 1 — needs a beefy self-hosted runner)
 - [ ] Public GitHub organization + repo split (manifest, vendor, docs)
 
 ## Phase 1 — Bring-up (target: Q4 2026)
