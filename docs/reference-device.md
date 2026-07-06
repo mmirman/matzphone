@@ -43,8 +43,10 @@ follow once it boots.
 
 Until MatzPhone produces signed images, the bring-up loop is stock AOSP:
 
-1. Sync our manifest, `lunch tokay-trunk_staging-userdebug` (target exists
-   once we add the device projects to `default.xml` — see backlog).
+1. Sync our manifest — the Pixel 9 trees are already in the AOSP snapshot
+   (`device/google/caimito*`, `device/google/zumapro*`) — then
+   `lunch matzphone_tokay-trunk_staging-userdebug` (defined in
+   `vendor/matzphone/products/`, layered on AOSP's `aosp_tokay`).
 2. Download the matching **vendor/proprietary binaries** for the build ID
    from Google's driver-binaries page and extract them into the tree
    before building; they are not redistributable and never enter our repos.

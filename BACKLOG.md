@@ -16,8 +16,6 @@ do not invent filler tasks.
 ## Next (Phase 1 prep)
 - [ ] OWNER DECISION: purchase 2× unlocked Pixel 9 from Google Store
       (~$1.6K; requirements in docs/reference-device.md)
-- [ ] Add caimito/zumapro device + kernel projects to default.xml so
-      `lunch tokay-*` targets exist after sync
 - [ ] Vendor patches directory + apply-patches script with CI check
 - [ ] Signing key ceremony doc: how release keys are generated/stored
       offline
@@ -33,6 +31,10 @@ do not invent filler tasks.
 - [ ] Trademark search on "MatzPhone" before money is spent on branding
 
 ## Done
+- [x] matzphone_tokay device product defined atop aosp_tokay (verified
+      present in caimito tree at r10); caimito/zumapro projects confirmed
+      already syncing via the AOSP snapshot — no manifest change needed
+      (2026-07-06)
 - [x] Reference device chosen: Pixel 9 `tokay` (trees verified present at
       android-15.0.0_r10; Pixel 9a is not); unlock/flash procedure
       documented in docs/reference-device.md (2026-07-06)
